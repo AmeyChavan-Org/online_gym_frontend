@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>gym website</title>
+</head>
+		<!-- external css -->
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- font link added after all header was developed -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200&family=Ubuntu&display=swap" rel="stylesheet">
+
+<style>
+/*CSS reset	*/
+	body{
+		color: whitesmoke;
+		margin: 0px;
+		padding: 0px;
+/*url is a function used to add image to background by its path(url)		*/
+		background: url("img/bg.jpg");
+/*keep in mind in properties path is given by "\" but here give it in "/" see carefully*/
+/*from google fonts*/
+	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+		}
+
+
+	.left{
+/*			ITHE LAST LA APAN BORDER COMMENT KELI,COZ WE USE IT FOR OUR PREFERNCE WHILE MARK-UP	*/
+/*			border: 2px solid white;*/
+			display: inline-block;
+			position: absolute;
+			left: 1px;
+			top: 1px;
+
+
+		}
+
+/*	After adding image to change its size	*/
+	
+	.left img{
+		width: 35px;
+/*	ata image la jr color change karycha asel tr apan photoshop karu sakto but css madhe function ahe "invert" tyni pn karta yeta edit (like black cha white, white cha black )	*/
+		filter: invert(20%);
+/*% mhanje kiti percentage ni change karycha ahe color*/
+
+	}
+
+/*	to edit chavan and sons */
+	.left div{
+		text-align: center;
+/*		varun height kiti thevychi te				*/
+					line-height: 18px;
+					font-size: 18px;
+	}
+
+	.mid{	
+			/*note :- kisi bhi element ko center mai lana hai to 3 condition hai...1.display block 2.width set karo aur margin auto kardo			*/
+/*			border: 2px solid white;*/
+			display: block;
+			margin: 1px auto;
+			width: 50% ;
+		}
+
+	.right{
+/*			border: 2px solid white;*/
+			display: inline-block;
+			position: absolute;
+			right: 1px;
+			top: 1px;
+		}
+/*ithe ata div set zalya nantr sagala ahe		*/
+
+	.navbar{
+			display: inline-block;
+	}
+
+	.navbar li{
+			display: inline-block;
+			font-size: 25px;
+	}
+
+	.navbar li a{
+			color: whitesmoke;
+			text-decoration: none;
+			padding: 14px 5px;
+	}
+/*if arrow is hovering on home/about us etc OR ELSE if we click on it then what should happen	*/
+	.navbar li a:hover, .navbar li a:active{
+			text-decoration: underline;
+			color: grey;
+
+			
+		}
+/*now to edit the right side buttons*/
+	.btn{
+		margin: 14px 21px;
+		background-color: lightblue;
+		color: white;
+		padding: 8px 11px;
+		border: 2px solid grey;
+		border-radius: 10px;
+		font-size: 15px;
+/*cursor pointer kela ki kay hotya ? arrow ,finger arrow madhe convert hoto(jasa navbar cha home/aboutus vr arrow lehela ki hoto tasa) without cursor pointer te nahi hot so!*/
+		cursor: pointer;
+
+/*	jari apan main body madhe font takla tari te kadhi kadhi due default sitting te inherit nhi {jasa ithe zala }so ithe pn font takawa lagel	*/
+
+		font-family: 'Josefin Sans', sans-serif;
+			font-family: 'Ubuntu', sans-serif;
+/*	comment karun bg samjel		*/
+	}
+
+	.btn:hover{
+		background-color: grey;
+		color: black;
+	}
+	
+	.container{
+		border: 2px solid white;
+		margin: 23px 41px;
+		padding: 61px 24px;
+		width: 35%;
+		border-radius: 24px;
+	}
+/*ata form vr work karu ekda navigation bars zale tr*/
+	.formgrp input{
+		text-align: center;
+		display: block;
+		width: 355px;
+		padding: 8px;
+		border: 2px solid grey;
+		margin: 7px auto;
+		font-size: 22px;
+		border-radius: 15px;
+		font-family: 'Ubuntu', sans-serif;
+
+	}
+/*keep  it mind ki h2 container cha at ahe so , chukun .formgrp h2 lihila tr work nhi karnr*/
+	.container h2{
+		text-align: center;
+	}
+/*ithe pn same mistake keli hoti*/
+	.container button{
+		display: block;
+		width: 34%;
+		margin: 31px auto;
+		padding: 7px;
+
+
+	}
+
+</style>
+<body>
+	<!-- in this website , apan sagayt pahile style nit kaaru ghetli div banavlya nantr, so mg nantr kahi problem nhi yet....so hai nehemi lakshat thevycha ok? -->
+	<header class="header">
+			<div class="left">
+				<!--this box is logo  -->
+				<img src="img\logo.jpg" alt="no image">
+				<div>welcome to chavan's and sons</div> 
+			</div>
+				
+			<div class="mid">
+				<!--this box is for navigation  -->
+				<ul class="navbar">
+					<li ><a href="#" class="active">HOME</a></li>
+					<li ><a href="#">ABOUT US </a></li>
+					<li ><a href="#">FITNESS DETAILS</a></li>
+					<li ><a href="#">CONTACT US</a></li>
+				</ul>	
+			</div>
+
+			<div class="right">
+				
+				<!-- this box is for buttons -->
+				<button class="btn">CALL US KNOW</button>
+				<button class="btn">EMAIL-US</button>
+			</div>
+
+	</header>
+	<!-- WE ARE DONE WITH HEADER ATA LANDING PAGE BANYCHA -->
+		<div class=container > 
+			<h2>JOIN THE GYM RIGHT NOW!</h2>
+				<form action="noaction.php" method="post">
+					<div class="formgrp">
+						<input type="text" name="" placeholder="Enter Your Name" id="">
+					</div>
+
+					<div class="formgrp">
+						<input type="text" name="" placeholder="Enter Your Gender" id="">
+					</div>
+
+					<div class="formgrp">
+						<input type="text" name="" placeholder="Enter Your Age" id="">
+					</div>
+
+					<div class="formgrp">
+						<input type="text" name="" placeholder="Enter Your Address" id="">
+					</div>
+
+					<div class="formgrp">
+						<input type="text" name="" placeholder="Enter Your Mobile No" id="">
+					</div>
+
+					<div class="formgrp">
+						<input type="text" name="" placeholder="Enter Your E-mail" id="">
+					</div>
+
+					<button class="btn">CLICK TO SUBMIT</button>
+				</form>
+
+
+		</div>
+		<footer>
+			<div class="navbar">
+
+			</div>	
+		</footer>
+
+
+</body>
+</html>
